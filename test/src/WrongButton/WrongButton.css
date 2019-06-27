@@ -1,0 +1,24 @@
+.wrongbtn {
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    display: block;
+    float: center; 
+    text-align:center;
+    text-decoration:none;
+    color: #ecf0f1;
+    box-shadow: 0px 6px #F96C6C;
+    background: #F96C6C;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .wrongbtn:active{
+    border: none;
+    position:relative;
+    top:3px;
+    box-shadow: 0px 0px #2c3e50;
+    background: #2c3e50;
+  }
