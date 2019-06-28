@@ -34,6 +34,9 @@ class App extends Component {
         .catch(function (error) {
           console.log(error);
         });
+      axios.post('http://localhost:8000/', {
+          name: 'Flavio'
+        })
 
     }
 

@@ -15,8 +15,9 @@ wrongList = []
 listIndex = 0
 counter = 0
 
-# infinite loop
-while True:
+def clueGen():
+    global listIndex
+    global counter
     # check counter to see if fifth clue
     if counter%5 == 0:
         # check wrongList
@@ -37,7 +38,8 @@ while True:
         listIndex=0
     # check if we've been round once already and if wrongList is empty
     if counter > len(bigList)-1 and len(wrongList) == 0:
-        break
+        return None
+    return clue
 
 
 
@@ -46,7 +48,7 @@ while True:
     #     wrongList.append(clue)
 
 
-def note_repr():
+def note_repr(clue):
     return {
         'Clue': clue['Clue'],
         'Word': clue['Word'],
@@ -60,14 +62,14 @@ def notes_list():
     """
     List or create notes.
     """
-    # if request.method == 'POST':
-    #     note = str(request.data.get('text', ''))
-    #     idx = max(notes.keys()) + 1
-    #     notes[idx] = note
-    #     return note_repr(idx), status.HTTP_201_CREATED
+    global wrongList
 
+    if request.method == 'POST':
+        print(request.data)
+
+    clue = clueGen()
     # request.method == 'GET'
-    return jsonify(note_repr())
+    return jsonify(note_repr(clue))
 
 
 # @app.route("/<int:key>/", methods=['GET', 'PUT', 'DELETE'])
