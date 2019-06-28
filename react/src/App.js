@@ -59,12 +59,10 @@ class App extends Component {
             explanation={this.state.currentCard.explanation}
           />
         </div>
-        <div className="rightButtonSecion">
-          <RightButton drawCard={this.updateCard}
-          />
-        </div>
-        <div className="wrongButtonSecion">
+        <div className="buttonContainer">
           <WrongButton drawCard={this.updateCard}
+          />
+          <RightButton drawCard={this.updateCard}
           />
         </div>
       </div>

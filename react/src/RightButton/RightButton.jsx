@@ -1,5 +1,5 @@
-import React, {Component} from 'react'; 
-import './RightButton.css'; 
+import React, {Component} from 'react';
+import './RightButton.css';
 
 class RightButton extends Component{
     constructor(props){
@@ -13,11 +13,9 @@ class RightButton extends Component{
     }
     render(props){
         return(
-            <div className="buttonContainer">
-                <button className="rightbtn" onClick={this.drawCard}>Right</button>
-            </div>
+                <button className="rightbtn" onClick={this.drawCard}>&#10003;</button>
         )
     }
 }
 
-export default RightButton 
+export default RightButton

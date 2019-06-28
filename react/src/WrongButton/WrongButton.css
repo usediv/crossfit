@@ -1,20 +1,20 @@
 .wrongbtn {
-    font-size: 1.5em;
+    font-size: 2.5em;
     border: none;
     border-radius: 10px;
-    width: 250px;
-    height: 50px;
+    width: 50%;
+    height: 44px;
+    padding: 0;
     display: block;
-    float: center; 
+    float: center;
     text-align:center;
     text-decoration:none;
     color: #ecf0f1;
     box-shadow: 0px 6px #F96C6C;
     background: #F96C6C;
-    margin: auto;
-    margin-top: 20px;
+    margin: 0
   }
-  
+
   .wrongbtn:active{
     border: none;
     position:relative;

@@ -37,8 +37,9 @@
   position: absolute;
   overflow: hidden;
   text-align: center;
-  background-color: rgba(255, 251, 251, 1);
+  /* background-color: rgba(255, 251, 251, 1); */
   backface-visibility: hidden;
+  /* box-shadow: 10px 10px 20px #aaaaaa; */
 }
 
 .card .back {
@@ -48,6 +49,7 @@
   transform: rotateY(180deg);
   background-color: rgb(245, 245, 245);
   backface-visibility: hidden;
+  /* box-shadow: 10px 10px 20px #aaaaaa; */
 }
 
 .clue{

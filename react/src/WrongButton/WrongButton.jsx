@@ -1,5 +1,5 @@
-import React, {Component} from 'react'; 
-import './WrongButton.css'; 
+import React, {Component} from 'react';
+import './WrongButton.css';
 
 class WrongButton extends Component{
     constructor(props){
@@ -13,11 +13,9 @@ class WrongButton extends Component{
     }
     render(props){
         return(
-            <div className="buttonContainer">
-                <button className="wrongbtn" onClick={this.drawCard}>Wrong</button>
-            </div>
+                <button className="wrongbtn" onClick={this.drawCard}>&#215;</button>
         )
     }
 }
 
-export default WrongButton 
+export default WrongButton

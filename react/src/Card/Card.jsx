@@ -1,5 +1,5 @@
-import React from 'react'; 
-import './Card.css'; 
+import React from 'react';
+import './Card.css';
 
 const Card = (props) => (
     <div className="card-container">
@@ -16,4 +16,4 @@ const Card = (props) => (
     </div>
 )
 
-export default Card 
+export default Card
