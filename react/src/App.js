@@ -27,7 +27,7 @@ class App extends Component {
         cards: currentCards,
         currentCard: this.getRandomCard(currentCards)
       });
-      axios.get('http://localhost:5000')
+      axios.get('http://localhost:8000/')
         .then(function (response) {
           console.log(response);
         })
