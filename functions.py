@@ -1,4 +1,4 @@
-import csv
+import csv, random
 
 def getList():
     '''read data from CSV and populate in bigList'''
@@ -10,9 +10,10 @@ def getList():
         csv_reader = csv.DictReader(csv_file,fieldnames=fieldnames)
         limit = 1
         for item in csv_reader:
-            if item['Weekday'] == 'Wed' and limit < 20:
+            if item['Weekday'] == 'Wed' and limit < 12000:
                 bigList.append(item)
                 limit+=1
+    random.shuffle(bigList)
     return bigList
 
 def getClue():

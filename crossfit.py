@@ -11,6 +11,8 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 # read data from CSV and populate in bigList
 bigList = getList()
 
+# print(bigList)
+
 wrongList = []
 listIndex = 0
 counter = 0
@@ -57,19 +59,55 @@ def note_repr(clue):
 
 
 
-@app.route("/", methods=['GET', 'POST'])
-def notes_list():
-    """
-    List or create notes.
-    """
-    global wrongList
+# @app.route("/", methods=['GET', 'POST'])
+# def notes_list():
+#     """
+#     List or create notes.
+#     """
+#     global wrongList
+#
+#     if request.method == 'POST':
+#         print(request.data)
+#
+#     clue = clueGen()
+#     # request.method == 'GET'
+#     return jsonify(note_repr(clue))
 
-    if request.method == 'POST':
-        print(request.data)
+
+@app.route("/", methods=['GET'])
+def get_clue():
+    """
+    Deliver a clue
+    """
 
     clue = clueGen()
     # request.method == 'GET'
     return jsonify(note_repr(clue))
+
+
+@app.route("/wrong/", methods=['POST'])
+def wrong_list():
+    """
+    Add to wrongList
+    """
+    global wrongList
+
+
+    clue = request.data['clue']['clue']
+    word = request.data['clue']['word']
+    explanation = request.data['clue']['explanation']
+
+    print(clue)
+    print(word)
+    print(explanation)
+
+    clueDict = {'Clue':  clue, 'Word': word, 'Explanation': explanation}
+
+    wrongList.append(clueDict)
+
+
+
+    return ('sure')
 
 
 # @app.route("/<int:key>/", methods=['GET', 'PUT', 'DELETE'])
